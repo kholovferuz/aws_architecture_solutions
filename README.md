@@ -1,4 +1,4 @@
-`**Data Lake for Financial Services**`
+**Data Lake for Financial Services**
 
 **Solution Request**
 
@@ -10,7 +10,7 @@ The core of the solution would be to use AWS Database Migration Service, or AWS 
 For cataloging and querying the data lake we'll use AWS Glue. First, we'll set up an AWS Glue crawler to automatically scan the data in your S3 data lake and populate the AWS Glue Data Catalog with metadata about the data, such as table definitions and data types.
 After the data is cataloged, you'll be able to use Amazon Athena to efficiently query the data in the data lake. Athena is a serverless, interactive query service that helps you use standard SQL to analyze the data without the need to set up any infrastructure.
 
-**Architecture **
+**Architecture**
 
 ![Data Lake for Financial Services (1)](https://github.com/user-attachments/assets/4823024c-5abe-4b39-bd44-afd7076016c2)
 
@@ -20,9 +20,9 @@ This solution provides a centralized analytics environment that extracts insight
 
 Data engineers can use the combined data in this data lake, located in Amazon S3, to run on-demand queries and obtain near real-time insights.
 
-  1. The solution starts with bank transaction data being housed in Amazon Aurora MySQL-Compatible Edition and Amazon Aurora PostgreSQL-Compatible Edition databases.
-  2. AWS Database Migration Service (AWS DMS) captures a copy of this data, from these multiple sources, in near real time. 
-  3. The replicated data is stored, in Parquet format, to form the Amazon S3 data lake.
-  4. AWS Glue then catalogs the raw data, using an AWS Glue crawler, to create an AWS Glue Data Catalog.
-  5. AWS Lake Formation provides central access controls for the data in the data lake so that data engineers and applications have access to only what they need.
-  6. Amazon Athena can issue SQL-based queries against the data lake, using the AWS Glue Data Catalog. In this way, data engineers can use the data, combined from multiple sources into a data lake, to generate on-demand reports and near real-time insights.
+      1. The solution starts with bank transaction data being housed in Amazon Aurora MySQL-Compatible Edition and Amazon Aurora PostgreSQL-Compatible Edition databases.
+      2. AWS Database Migration Service (AWS DMS) captures a copy of this data, from these multiple sources, in near real time. 
+      3. The replicated data is stored, in Parquet format, to form the Amazon S3 data lake.
+      4. AWS Glue then catalogs the raw data, using an AWS Glue crawler, to create an AWS Glue Data Catalog.
+      5. AWS Lake Formation provides central access controls for the data in the data lake so that data engineers and applications have access to only what they need.
+      6. Amazon Athena can issue SQL-based queries against the data lake, using the AWS Glue Data Catalog. In this way, data engineers can use the data, combined from multiple sources into a data lake, to generate on-demand reports and near real-time insights.
