@@ -16,6 +16,7 @@ A bank would like to replicate data from their banking systems to a data lake. I
 
 ![Securing a Banking Data Lake](https://github.com/user-attachments/assets/f57379b5-b783-471e-97cb-ca0072266ebe)
 
+
 **Explanation of the architecture**
 
 This solution uses AWS Lake Formation to create and manage a data lake from multiple data sources within the bank.
