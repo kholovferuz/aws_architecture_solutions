@@ -9,7 +9,7 @@ An e-commerce store has a high amount of cart abandonment on a daily basis. They
 
   - Use **Amazon S3** as the data lake storage layer.
   - Configure an _event notification_ to invoke a **Lambda function**.
-  - Configure Amazon **EventBridge ** to _invoke_ a **Lambda function.**
+  - Configure Amazon **EventBridge** to _invoke_ a **Lambda function.**
 
 
 **Architecture**
